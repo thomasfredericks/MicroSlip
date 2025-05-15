@@ -36,6 +36,11 @@ public:
         this->stream = stream;
     }
 
+        MicroSlip(Stream & stream)
+    {
+        this->stream = &stream;
+    }
+
     // THIS COULD BE OPTIMISED
     size_t parsePacket(uint8_t *buffer, size_t bufferSize)
     {
